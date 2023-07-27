@@ -1,11 +1,10 @@
 package com.mycompany.models;
 
-import lombok.AllArgsConstructor;
-// import lombok.Builder;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
+@Builder
 public class ResponseBody {
     private int code;
     private String message;

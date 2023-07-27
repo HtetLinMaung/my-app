@@ -13,6 +13,8 @@ public class HelloResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public ResponseBody sayHello() {
-        return new ResponseBody(200, "Hello World!");
+        return ResponseBody.builder()
+                .code(200)
+                .message("Hello, World!").build();
     }
 }
