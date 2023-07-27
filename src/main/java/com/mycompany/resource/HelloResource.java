@@ -5,12 +5,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.mycompany.models.ResponseBody;
+
 @Path("/hello")
 public class HelloResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String sayHello() {
-        return "Hello, World!";
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseBody sayHello() {
+        return ResponseBody.builder()
+                .code(200)
+                .message("Hello, World!").build();
     }
 }
